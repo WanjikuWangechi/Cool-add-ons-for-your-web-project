@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f6f6f6;
+}
+.drawer{
+  position: relative;
+}
+.drawer .menu_toggle{
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 50px;
+  background: #fff;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  z-index: 100;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drawer .menu_toggle::before{
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border-bottom-left-radius: 15px;
+  box-shadow: -5px 2px #fff;
+}
+.drawer .menu_toggle::after{
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border-top-left-radius: 15px;
+  box-shadow: -5px -2px #fff;
+}
+.drawer .menu_toggle span{
+  position: relative;
+  left: -8px;
+  display: inline-block;
+  min-width: 25px;
+  height: 25px;
+  /* background: #f00; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drawer .menu_toggle span::before{
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #379fff;
+  border-right: 2px solid #379fff;
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+.drawer .menu_toggle.active span::before{
+  transform: rotate(225deg);
+}
+.drawer .navigation{
+  position: relative;
+  width: 80px;
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.drawer .navigation.active{
+  width: 300px;
+}
+.drawer .navigation .menu{
+  position: relative;
+  width: 100%;
+  padding: 30px 10px;
+  transition: 0.5s;
+}
+.drawer .navigation .menu li{
+  list-style: none;
+}
+.drawer .navigation .menu li a{
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: #111;
+  border-radius: 30px;
+}
+.drawer .navigation .menu li a:hover{
+  background: #379fff;
+  color: #fff;
+}
+.drawer .navigation .menu li a .icon{
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+.drawer .navigation .menu li a .text{
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25em;
+  margin-left: 10px;
+}
