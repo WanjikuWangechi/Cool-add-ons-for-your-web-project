@@ -67,7 +67,7 @@ class Vec2 {
   
       const dampingMagnitude = body.velocity.magnitude * -b
   
-      const magnitude = dampingMagnitude + springMagnitude
+      const magnitude = springMagnitude + dampingMagnitude
   
       return Vec2.scale(springDirection, magnitude)
     }

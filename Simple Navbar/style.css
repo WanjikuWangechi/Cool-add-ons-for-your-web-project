@@ -87,8 +87,8 @@
   }
   
   .tab-bar__tab-name {
-    font-size: 0.75em;
-    font-weight: 500;
+    font-size: 0.85em;
+    font-weight: 600;
     line-height: 1;
     top: calc(100% - 0.5rem);
     opacity: 0;
