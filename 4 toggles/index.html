@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WEB BEKS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="light-side">
+    <div class="toggle light" onclick="toggleSwitchLight(this)">
+      <div class="switch switch-light"></div>
+    </div>
+
+    <div class="toggle light" onclick="toggleSwitchRedLight(this)">
+      <div class="switch switch-light off-red-light"></div>
+    </div>
+  </div>
+
+  <div class="dark-side">
+    <div class="toggle dark" onclick="toggleSwitchDark(this)">
+      <div class="switch switch-dark off-dark"></div>
+    </div>
+
+    <div class="toggle dark" onclick="toggleSwitchRedDark(this)">
+      <div class="switch switch-dark"></div>
+    </div>
+  </div>
+
+
+  <svg>
+    <filter id='noiseFilter'>
+      <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+    </filter>
+  </svg>
+  <svg>
+    <filter id='noiseFilter2'>
+      <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+    </filter>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
